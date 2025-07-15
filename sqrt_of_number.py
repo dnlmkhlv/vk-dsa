@@ -1,21 +1,17 @@
 def find_sqrt(num):
-    arr = []
-    for i in range(num + 1):
-        arr.append(i)
-
     left = 0
-    right = len(arr) - 1
+    right = num
 
     while left <= right:
-        middle = left + (right - left) // 2
+        middle = (left + right) // 2
+        square = middle * middle
 
-        if (arr[middle] ** 2 == num):
-            return arr[middle]
-
-        if arr[middle] ** 2 > num:
-            right = middle - 1
-        else:
+        if square == num:
+            return middle
+        elif square < num:
             left = middle + 1
+        else:
+            right = middle - 1
 
     return right
 
