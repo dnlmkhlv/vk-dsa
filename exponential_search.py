@@ -13,4 +13,8 @@ def exponential_search(data, target):
         
     return [border // 2, border]
 
-print(exponential_search([3, 4, 7, 9, 11, 12, 18, 24, 63, 72, 81, 99], 18))
+n = int(input())
+arr = list(map(int, input().split()))
+target = int(input())
+
+print(exponential_search(arr, target)[0], exponential_search(arr, target)[1])
