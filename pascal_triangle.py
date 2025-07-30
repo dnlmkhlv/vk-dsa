@@ -1,15 +1,13 @@
-n = 6
+def getRow(rowIndex):
+    n = rowIndex + 1
+    dp = []
 
-dp = []
+    for i in range(n):
+        tmp = [1] * (i + 1)
+        for j in range(1, i):
+            tmp[j] = dp[i - 1][j - 1] + dp[i - 1][j]
+        dp.append(tmp)
 
-for i in range(1, n + 1):
-    tmp = []
-    for j in range(i):
-        tmp.append(1)
-    dp.append(tmp)
+    return dp[rowIndex]
 
-for row in range (1, n):
-    for col in range(1, row):
-        dp[row][col] = dp[row - 1][col - 1] + dp[row - 1][col]
-
-print(dp)
+print(getRow(5))
