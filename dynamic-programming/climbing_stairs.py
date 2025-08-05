@@ -5,4 +5,4 @@ def jump(n):
         dp.append(dp[-1] + dp[-2])
     return dp[n]
 
-print(jump(8))
+print(jump(8))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
